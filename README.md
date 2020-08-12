@@ -6,3 +6,6 @@ iptables -t ${table}(nat,filter,mangle) -A(ppend) $(chain)[INPUT,FORWARD,OUTPUT]
 -t(filter) is default
 #https://kkslinuxinfo.wordpress.com/2016/02/16/iptables-firewall-tables/
 #iptables -A INPUT -i eth0 -p tcp -dport 80 -s any -j ACCEPT
+
+#Accept traffic lo interface
+iptables -A INPUT -i lo -j ACCEPT
