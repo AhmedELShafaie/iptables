@@ -10,4 +10,5 @@ iptables -A INPUT -i eth0 -p tcp -dport 80 -s any -j ACCEPT
 
 
 #Accept traffic lo interface  
-iptables -A INPUT -i lo -j ACCEPT
+iptables -A INPUT -i lo -j ACCEPT  
+iptables -L -v  
